@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jquery form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ 
+<style>
+.wrapper{
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+ 
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: ‘Montserrat’, sans-serif;
+}
+body{
+
+    justify-content: center;
+   align-items: center;
+  background: linear-gradient(
+     105deg,
+     #ed87c6 ,
+     #9c2f70
+ );
+}
+
+.registration_form{
+  border-radius: 5px;
+  width: 1000px;
+  background: white;
+  padding: 15px;
+  
+}
+
+.col{
+    
+    margin-top: 25px;
+}
+.error{
+color: red;
+font-size: smaller;
+
+}
+ 
+</style>
+
+
+
+</head>
+  <body>
+
+    <form id="register" action="www.google.com" name="myform">
+    <div class="wrapper">
+
+   <div class="registration_form">
+    
+    <h3>Registration Form</h3>
+           <!-- Fist Name -->
+    <div class="row g-3">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name" id="firstname" name="firstname" >
+          
+        </div>
+        
+
+        <!-- Last Name -->
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name"  id="lastname" name="lastname" >
+         
+        </div>     
+      </div>
+
+      <!-- Birthday -->
+      <div class="row g-3" >
+      <div class="col">
+        <input type="date" class="form-control" placeholder="Birthday" id="birthday" aria-label="Birthday" name="birthday" >
+        
+    </div>
+
+        <!-- Gender -->
+       
+        <div class="col">
+          
+            <div class="form-check form-check-inline">
+              
+                <label class="form-check-label" for="gender">Gender:</label>
+          
+              </div>
+              
+            <div class="form-check form-check-inline" >
+                <input class="form-check-input" class="form-control"   type="radio" name="gender" id="male"  onclick="onlyOne(this)">
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input"  class="form-control" type="radio" name="gender" id="female"  onclick="onlyOne(this)">
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input"  class="form-control" type="radio" name="gender" id="other"  onclick="onlyOne(this)">
+                <label class="form-check-label" for="other">Other</label>
+             
+              </div>
+              <label id="gender-error" class="error" for="gender"></label>
+              
+        
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="row g-3">
+        <div class="col">
+          
+          <input type="text" class="form-control" placeholder="Email" aria-label="email" name="email" id="email">
+          
+        </div>
+  
+          <!-- Phone Number -->
+          <div class="col">
+            <input type="text" class="form-control" id="number" aria-label="number" placeholder="Phone Number" name="number">
+           
+        </div>
+  
+      </div>
+
+
+  <!-- Subject  -->
+  <div class="row g-3">
+    <div class="col">
+      <select class="form-select" aria-label="Default select example" name="subject" id="subject" >
+          <option value="">Subject</option>
+        <option value="physics">Physics</option>
+        <option value="english">English</option>
+        <option value="Science">Science</option>
+      </select>
+    
+    </div>
+</div>
+
+<!-- Input file -->
+<div class="col">
+    <input type="file" id="inputfile" name="inputfile" class="form-control" aria-label="file example" >
+
+</div>
+
+
+
+<!-- checkBook -->
+
+    <div class="col">
+    <input type="checkbox" class="form-check-input" id="validationFormCheck1" name="checkbox">
+    <label class="form-check-label" for="validationFormCheck1"> Agree to terms and conditions.</label>
+   
+  </div>
+  <label id="checkbox" class="error" for="checkbox"></label>
+
+
+<!-- button -->
+<div class="row g-3">
+    <div class="col">
+<button type="submit" class="btn btn-primary" id="submit" value="submit" name="submit">Submit</button>
+</div>
+</div>
+
+</div>
+</div>
+</form>
+
+
+
+<!-- javaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"> </script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ <script src="jquery.js"></script>
+
+  </body>
+</html>
